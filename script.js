@@ -47,7 +47,7 @@ function addMarker(bus, id) {
    const marker = new mapboxgl.Marker()
        .setLngLat([bus.attributes.longitude, bus.attributes.latitude])
         .setPopup(new mapboxgl.Popup({ offset: 35 })
-        .setHTML('<ul><li>Bus #' + bus.attributes.label + '</li><li>Bearing: ' + bus.attributes.bearing + '</li><li>Status:' + (bus.attributes.occupancy_status ?? "FULL") + '</li></ul>'))
+        .setHTML('<ul><li>Bus #' + bus.attributes.label + '</li><li>Bearing: ' + bus.attributes.bearing + '</li><li>Status:' + (bus.attributes.current_status) + '</li><li>Speed:'+(bus.attributes.speed) + '</li></ul>'))
        .addTo(map);
    const mLayer = {};
         mLayer.marker = marker;
