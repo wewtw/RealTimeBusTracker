@@ -16,7 +16,8 @@ async function getBusLocations(){
     const url = 'https://api-v3.mbta.com/vehicles?filter[route]=&include=trip';
     const response = await fetch(url);
     const json = await response.json();
- return json.data;
+    console.log(json.data);
+    return json.data;
  }
 
 
@@ -45,6 +46,8 @@ let markers = [];
 function addMarker(bus, id) {
    const marker = new mapboxgl.Marker()
        .setLngLat([bus.attributes.longitude, bus.attributes.latitude])
+        .setPopup(new mapboxgl.Popup({ offset: 35 })
+        .setHTML('<ul><li>Bus #' + bus.attributes.label + '</li><li>Bearing: ' + bus.attributes.bearing + '</li><li>Status:' + (bus.attributes.occupancy_status ?? "FULL") + '</li></ul>'))
        .addTo(map);
    const mLayer = {};
         mLayer.marker = marker;
