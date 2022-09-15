@@ -1,0 +1,14 @@
+{
+  "name": "realtimetracker",
+  "version": "1.0.0",
+  "description": "RealTimeBusTracker",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "realtime"
+  ],
+  "author": "Edar Tlis",
+  "license": "MIT"
+}

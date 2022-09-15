@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>RealTime-Bus-Tracker</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    <style type="text/css">
+        #info {
+        display: table;
+        position: relative;
+        margin: 0px auto;
+        word-wrap: anywhere;
+        white-space: pre-wrap;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: #222;
+        background: #fff;
+        }
+        </style>
+        <!--div that will hold the map -->    
+    <div id="map"></div>
+        <!--Start Button-->
+    <div class="buttonMove">
+        <button style="font-size: 2em;" onclick="MoveBus()">
+            Start Tracking
+        </button>
+    </div>
+        <!--realtime mouse loc div-->
+    <pre id="info"></pre>
+   <script src="script.js"></script>    
+</body>
+</html>
