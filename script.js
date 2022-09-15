@@ -27,9 +27,9 @@ async function MoveBus(){
    const buses = await getBusLocations();
 
    buses.forEach( bus => {
-       const markerObj = getMarker(bus.id);        
-           if(markerObj){
-               const marker = Object.values(markerObj)[0];
+       const xBus = getMarker(bus.id);        
+           if(xBus){
+               const marker = Object.values(xBus)[0];
                moveMarker(marker, bus);
            }else{    
                 addMarker(bus, bus.id);
